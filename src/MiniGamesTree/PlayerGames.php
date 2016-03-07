@@ -16,12 +16,6 @@ class PlayerGames extends Base\ArrayBase{
         $this->mode = new Status;
     }
     
-    public function check(){
-        if($this->getPlayerCount() == 1 && $this->mode->isStarting()){
-        // soon
-        }
-    }
-    
         public function add($number,$player){
         $this->server->getPluginManager()->callEvent(new PlayerJoinGameEvent($this, $player));
        return $this->pg
