@@ -6,6 +6,8 @@ use pocketmine\Server;
 
 class Time extends Base\ArrayBase{
     
+    const Lagg = 100001;
+    
     /** @var Server */
     private $server;
     
@@ -18,7 +20,10 @@ class Time extends Base\ArrayBase{
     }
     public function setTime($time){
         $this->server->getPluginManager()->callEvent(new PluginSetTimeEvent($this, $time));
+        if($this->getTimeSeconds() < self::Lagg):
         return $this->Time = $time + 1;
+        endif;
+        
     }
     
     public function getTimeSeconds(){
