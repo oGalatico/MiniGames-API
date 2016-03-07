@@ -1,1 +1,5 @@
 name: MiniGamesAPI
+main: MiniGamesTree\Console\Logger
+version: 1.1
+author: Nawaf_Craft1b
+api: [1.4.0]
