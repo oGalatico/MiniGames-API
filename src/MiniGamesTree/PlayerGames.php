@@ -14,6 +14,7 @@ class PlayerGames extends Base\ArrayBase{
     }
     
         public function add($number,$player){
+        $this->joiner++;
         $this->server->getPluginManager()->callEvent(new PlayerJoinGameEvent($this, $player));
        return $this->pg
                 {
@@ -23,6 +24,7 @@ class PlayerGames extends Base\ArrayBase{
     }
     
     public function remove($number){
+        $this->joiner--;
         unset($this->pg{
             $number       
         });
@@ -49,6 +51,10 @@ class PlayerGames extends Base\ArrayBase{
         foreach($this->server->getOnlinePlayers() as $p){
         return in_array($p->getName(), $this->pg);
     }}
+    
+    public function getAllPlayerName($glue = " * "){
+        return join($glue , $this->pg);
+    }
     /*
     public function getNumber(){
         return fread(fopen("Number", "r"), filesize("Number"));
