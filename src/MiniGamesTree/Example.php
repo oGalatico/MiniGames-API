@@ -9,6 +9,7 @@ class Example {
   MiniGamesAPI::getInstance()->getPlayerWithNumber(1)->getInventory()->addItem(Item::get(1));
   if(MiniGamesAPI::getInstance()->inGame()){
    MiniGamesAPI::getInstance()->remove(1); // delete Player 1
+   
   }
   }
 
