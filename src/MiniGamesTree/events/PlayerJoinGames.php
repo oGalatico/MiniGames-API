@@ -44,7 +44,7 @@ class PlayerJoinGameEvent extends PluginEvent implements Cancellable{
         return $this->s;
     }
     
-    public function getPlayerSettings(){
+    public function getGameSettings(){
         return $this->g;
     }
 }
