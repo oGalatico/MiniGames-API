@@ -4,7 +4,7 @@ namespace MiniGamesTree\Base;
 
 class ArrayBase{
     
-        const Speed = 20;
+        public $Speed = 20;
     
         public $pg = array();
         
