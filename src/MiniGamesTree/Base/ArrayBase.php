@@ -6,7 +6,7 @@ class ArrayBase{
     
         public $Speed = 20;
         
-        public $move = "";
+        public $move = "-";
     
         public $pg = array();
         
