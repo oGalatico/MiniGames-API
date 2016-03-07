@@ -10,6 +10,8 @@ class ArrayBase{
     
         public $pg = array();
         
+        public $num = array();
+        
         public $status = array();
         
         public $Time = 0;
