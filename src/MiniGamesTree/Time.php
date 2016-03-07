@@ -27,7 +27,15 @@ class Time extends Base\ArrayBase{
     }
     
     public function getTimeSeconds(){
-        return $this->Time * ($this->Time);
+        return $this->Time;
+    }
+    
+    public function setTM($m = "-"){
+        return $this->move = $m;
+    }
+    
+    public function setSpeed($speed){
+        return $this->speed = $speed * 10;
     }
     
 }
