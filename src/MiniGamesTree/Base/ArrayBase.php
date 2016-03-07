@@ -14,5 +14,5 @@ class ArrayBase{
         
         public $Time = 0;
         
-        public $Joiner = 0;
+        public $number = 0;
 }
