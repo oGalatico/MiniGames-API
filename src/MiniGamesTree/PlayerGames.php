@@ -45,9 +45,10 @@ class PlayerGames extends Base\ArrayBase{
         return array_key_exists($number - 1, $this->pg);
     }
     
-    public function inGame($name){
-        return in_array($name, $this->pg);
-    }
+    public function inGame(){
+        foreach($this->server->getOnlinePlayers() as $p){
+        return in_array($p->getName(), $this->pg);
+    }}
     /*
     public function getNumber(){
         return fread(fopen("Number", "r"), filesize("Number"));
