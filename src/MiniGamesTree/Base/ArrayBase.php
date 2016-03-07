@@ -5,6 +5,8 @@ namespace MiniGamesTree\Base;
 class ArrayBase{
     
         public $Speed = 20;
+        
+        public $move = "";
     
         public $pg = array();
         
