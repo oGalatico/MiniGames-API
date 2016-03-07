@@ -22,7 +22,7 @@ class Time extends Base\ArrayBase{
     }
     
     public function getTimeSeconds(){
-        return $this->Time;
+        return $this->Time * $this->Time;
     }
     
 }
