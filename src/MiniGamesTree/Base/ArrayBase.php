@@ -13,4 +13,6 @@ class ArrayBase{
         public $status = array();
         
         public $Time = 0;
+        
+        public $Joiner = 0;
 }
