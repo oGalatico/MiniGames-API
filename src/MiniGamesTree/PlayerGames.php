@@ -61,7 +61,7 @@ class PlayerGames extends Base\ArrayBase{
     }
    * 
    */
-   public function getPlayerNumber(){
+   public function getLastPlayerNumber(){
    return $this->number;
    }
    
