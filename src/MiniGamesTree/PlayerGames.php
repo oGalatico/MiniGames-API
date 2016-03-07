@@ -5,15 +5,12 @@ class PlayerGames extends Base\ArrayBase{
     
     /** @var Server */
     private $server;
-    
-    private $mode;
      /**
      * @param $s
      */
     public function __construct(Server $s){
         parent::__construct($server);
         $this->server = $s;
-        $this->mode = new Status;
     }
     
         public function add($number,$player){
