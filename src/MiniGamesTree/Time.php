@@ -19,7 +19,7 @@ class Time extends Base\ArrayBase{
         $this->server = $s;
     }
     public function setTime($time){
-        $this->server->getPluginManager()->callEvent(new PluginSetTimeEvent($this, $time));
+        $this->server->getPluginManager()->callEvent(new events\Plugin\PluginSetTimeEvent($this, $time));
         if($this->getTimeSeconds() < self::Lagg):
         return $this->Time = $time + 1;
         endif;
@@ -34,7 +34,7 @@ class Time extends Base\ArrayBase{
         return $this->move = $m;
     }
     
-    public function setSpeed($speed){
+    public function setSpeed($speed = 2){ // 2 = 1 sec
         return $this->speed = $speed * 10;
     }
     
