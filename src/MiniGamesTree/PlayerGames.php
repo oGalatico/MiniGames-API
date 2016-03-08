@@ -42,7 +42,9 @@ class PlayerGames extends Base\ArrayBase{
     }
     
     public function getPlayerWithNumber($number){
-        return $this->server->getPlayer($this->pg[$number - 1]);
+        return $this->server->getPlayer($this->pg{
+       $number - 
+        (1)});
     }
     
     public function isPlayerWithNumber($number){
