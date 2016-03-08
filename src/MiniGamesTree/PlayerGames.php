@@ -15,6 +15,7 @@ class PlayerGames extends Base\ArrayBase{
     
         public function add($number,$player){
         $this->number++;
+        $this->num[$player] = $this->number;
         $this->server->getPluginManager()->callEvent(new PlayerJoinGameEvent($this, $player));
        return $this->pg
                 {
@@ -25,6 +26,7 @@ class PlayerGames extends Base\ArrayBase{
     
     public function remove($number){
         $this->number--;
+        unset($this->num[$this->getPlayerWithNumber($number)]);
         unset($this->pg{
             $number       
         });
@@ -64,6 +66,8 @@ class PlayerGames extends Base\ArrayBase{
    public function getLastPlayerNumber(){
    return $this->number;
    }
-   
+    public function getNumber($player){
+    return $this->num[$player];
+    }
 }
 ?>
