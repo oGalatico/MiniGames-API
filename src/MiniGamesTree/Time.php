@@ -6,8 +6,7 @@ class Time extends Base\ArrayBase{
     
     const Lagg = 100001;
 
-    public function setTime($server,$time){
-        $server->getPluginManager()->callEvent(new \events\Plugin\PluginSetTimeEvent($this, $time));
+    public function setTime($time){
         if($this->getTimeSeconds() < self::Lagg):
         return $this->Time = $time + 1;
         endif;
