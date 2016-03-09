@@ -1,7 +1,12 @@
 <?php
 namespace MiniGamesTree\PlayerSettings;
+
 use MiniGamesTree\PlayerGames;
+
 use MiniGamesTree\Status;
+
+use MiniGamesTree\Time;
+
 class PlayerAPI{
     
     /** @var PlayerGames */
@@ -9,13 +14,19 @@ class PlayerAPI{
     
     /** @var Status */
     private $s;
+    
+    /** @var Status */
+    private $Time;
+    
     /**
      * @param Status $s
      * @param PlayerGames $g
+     * @param Time $t
      */
-    public function __construct(\MiniGamesTree\Status $s, PlayerGames $g){
+    public function __construct(\MiniGamesTree\Status $s, PlayerGames $g,Time $t){
         $this->g = $g;
         $this->s = $s;
+        $this->Time = $t;
     }
     
     public function getGameSettings(){
@@ -23,5 +34,11 @@ class PlayerAPI{
     }
     
     public function getMode(){
-      return $this->s;
+    return $this->s;
     }
+    
+    public function getTime(){
+    return $this->Time;
+    }
+    
+}
