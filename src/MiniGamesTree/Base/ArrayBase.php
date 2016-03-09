@@ -4,7 +4,7 @@ namespace MiniGamesTree\Base;
 
 class ArrayBase{
     
-        public $Speed = 20;
+        public $speed = 20;
         
         public $move = "-";
     
