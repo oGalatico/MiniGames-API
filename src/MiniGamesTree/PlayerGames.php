@@ -1,22 +1,14 @@
 <?php
 namespace MiniGamesTree;
-use pocketmine\Server;
+
+
 class PlayerGames extends Base\ArrayBase{
     
-    /** @var Server */
-    private $server;
-     /**
-     * @param $s
-     */
-    public function __construct(Server $s){
-        parent::__construct($server);
-        $this->server = $s;
-    }
     
-        public function add($number,$player){
+        public function add($server,$number,$player){
         $this->number++;
         $this->num[$player] = $this->number;
-        $this->server->getPluginManager()->callEvent(new \events\PlayerJoinGameEvent($this, $player));
+        $server->getPluginManager()->callEvent(new \events\PlayerJoinGameEvent($this, $player));
        return $this->pg
                 {
         $number
