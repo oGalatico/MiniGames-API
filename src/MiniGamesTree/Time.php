@@ -19,7 +19,7 @@ class Time extends Base\ArrayBase{
         $this->server = $s;
     }
     public function setTime($time){
-        $this->server->getPluginManager()->callEvent(new events\Plugin\PluginSetTimeEvent($this, $time));
+        $this->server->getPluginManager()->callEvent(new \events\Plugin\PluginSetTimeEvent($this, $time));
         if($this->getTimeSeconds() < self::Lagg):
         return $this->Time = $time + 1;
         endif;
