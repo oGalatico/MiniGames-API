@@ -47,8 +47,8 @@ class PlayerGames extends Base\ArrayBase{
         return in_array($p->getName(), $this->pg);
     }}
     
-    public function getAllPlayerName($glue = " * "){
-        return join($glue , $this->pg);
+    public function getAllPlayerName($glue = " * "){ // Like /list
+        return implode($glue , $this->pg);
     }
     /*
     public function getNumber(){
