@@ -5,8 +5,8 @@ use pocketmine\scheduler\PluginTask;
 
 class RT extends PluginTask{
     public $base;
-    public function __construct(MiniGamesTree\Base\ArrayBase $base){
-        parent::__construct($plugin);
+    public function __construct(\MiniGamesTree\Base\ArrayBase $base){
+        parent::__construct($base);
         $this->base = $base;
     }
     public function onRun($tick){
@@ -22,3 +22,4 @@ class RT extends PluginTask{
     }
     }
 }
+?>
