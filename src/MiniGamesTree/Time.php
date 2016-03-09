@@ -15,7 +15,7 @@ class Time extends Base\ArrayBase{
      * @param $s
      */
     public function __construct(Server $s){
-        parent::__construct($server);
+        parent::__construct($s);
         $this->server = $s;
     }
     public function setTime($time){
