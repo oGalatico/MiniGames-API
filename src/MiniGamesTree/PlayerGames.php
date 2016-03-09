@@ -16,7 +16,7 @@ class PlayerGames extends Base\ArrayBase{
         public function add($number,$player){
         $this->number++;
         $this->num[$player] = $this->number;
-        $this->server->getPluginManager()->callEvent(new events\PlayerJoinGameEvent($this, $player));
+        $this->server->getPluginManager()->callEvent(new \events\PlayerJoinGameEvent($this, $player));
        return $this->pg
                 {
         $number
