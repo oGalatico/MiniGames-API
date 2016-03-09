@@ -5,10 +5,9 @@ namespace MiniGamesTree;
 class PlayerGames extends Base\ArrayBase{
     
     
-        public function add($server,$number,$player){
+        public function add($number,$player){
         $this->number++;
         $this->num[$player] = $this->number;
-        $server->getPluginManager()->callEvent(new \events\PlayerJoinGameEvent($this, $player));
        return $this->pg
                 {
         $number
