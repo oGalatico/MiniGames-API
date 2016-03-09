@@ -15,7 +15,7 @@ class PlayerAPI{
     /** @var Status */
     private $s;
     
-    /** @var Status */
+    /** @var Time */
     private $Time;
     
     /**
