@@ -2,24 +2,12 @@
 
 namespace MiniGamesTree;
 
-use pocketmine\Server;
-
 class Time extends Base\ArrayBase{
     
     const Lagg = 100001;
-    
-    /** @var Server */
-    private $server;
-    
-     /**
-     * @param $s
-     */
-    public function __construct(Server $s){
-        parent::__construct($s);
-        $this->server = $s;
-    }
-    public function setTime($time){
-        $this->server->getPluginManager()->callEvent(new \events\Plugin\PluginSetTimeEvent($this, $time));
+
+    public function setTime($server,$time){
+        $server->getPluginManager()->callEvent(new \events\Plugin\PluginSetTimeEvent($this, $time));
         if($this->getTimeSeconds() < self::Lagg):
         return $this->Time = $time + 1;
         endif;
