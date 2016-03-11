@@ -9,35 +9,24 @@ use MiniGamesTree\Time;
 
 class PlayerAPI{
     
-    /** @var PlayerGames */
     private $g;
-    
-    /** @var Status */
+
     private $s;
     
-    /** @var Time */
     private $Time;
-    
-    /**
-     * @param Status $s
-     * @param PlayerGames $g
-     * @param Time $t
-     */
-    public function __construct(\MiniGamesTree\Status $s, PlayerGames $g,Time $t){
-        $this->g = $g;
-        $this->s = $s;
-        $this->Time = $t;
-    }
-    
+
     public function getGameSettings(){
+    $this->g = new PlayerGames();
     return $this->g;
     }
     
     public function getMode(){
+    $this->s = new Status();
     return $this->s;
     }
     
     public function getTime(){
+    $this->Time = new Time();
     return $this->Time;
     }
     
