@@ -8,12 +8,13 @@ class Logger extends PluginBase {
 
     const Name = "MiniGamesBase";
     
-    public $Time = 0;
+    public $Time;
     
     public $base;
 
     public function onEnable() {
         $this->base = new \MiniGamesTree\Base\ArrayBase();
+        $this->Time = $this->base->Time;
         $this->getServer()->getScheduler()->scheduleRepeatingTask(new Run\RT($this), $this->base->speed);
         $this->getLogger()->info(\pocketmine\utils\TextFormat::GREEN.self::Name . " IS Worked");
         
