@@ -8,6 +8,8 @@ class Logger extends PluginBase {
 
     const Name = "MiniGamesBase";
     
+    public $Time = 0;
+    
     public $base;
 
     public function onEnable() {
