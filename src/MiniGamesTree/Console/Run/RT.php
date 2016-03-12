@@ -15,10 +15,10 @@ class RT extends PluginTask{
     
     public function TimeM($m){
     if($m == ('-')){
-    $this->base->base->Time--;
+    $this->base->Time--;
     }
     if($m == ('+')){
-    $this->base->base->Time++;
+    $this->base->Time++;
     }
     }
 }
