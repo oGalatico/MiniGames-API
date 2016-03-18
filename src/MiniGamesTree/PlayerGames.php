@@ -7,7 +7,7 @@ class PlayerGames extends Base\ArrayBase{
     
         public function add($number,$player){
         $this->number++;
-        $this->num[$player] = $this->number;
+        $this->num[$player->getName()] = $this->number;
        return $this->pg
                 {
         $number
@@ -17,7 +17,7 @@ class PlayerGames extends Base\ArrayBase{
     
     public function remove($number){
         $this->number--;
-        unset($this->num[$this->getPlayerWithNumber($number)]);
+        unset($this->num[$this->getPlayerWithNumber($number)->getName()]);
         unset($this->pg{
             $number       
         });
@@ -41,7 +41,12 @@ class PlayerGames extends Base\ArrayBase{
     public function isPlayerWithNumber($number){
         return array_key_exists($number - 1, $this->pg);
     }
-    
+
+         Public Function getName($number){
+     return $this->pg{$number -
+(1)
+)};}
+
     public function inGame(){
         foreach($this->server->getOnlinePlayers() as $p){
         return in_array($p->getName(), $this->pg);
@@ -60,7 +65,7 @@ class PlayerGames extends Base\ArrayBase{
    return $this->number;
    }
     public function getNumber($player){
-    return $this->num[$player];
+    return $this->num[$player->getName()];
     }
 }
 ?>
