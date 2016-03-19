@@ -100,6 +100,5 @@ class Score extends Base\ArrayBase{
     $this->setScore($player,$this->getScore($player) + $score) || $this->setScore($player,$this->getScore($player) - $score)
     
     */
-    
 }
 ?>
