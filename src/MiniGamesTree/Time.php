@@ -17,12 +17,12 @@ class Time extends Base\ArrayBase{
         return $this->Time;
     }
     
-    public function setTM($m = "-"){
+    public function setTimeMove($m = "-"){
         return $this->move = $m;
     }
     
-    public function setSpeed($speed = 2){ // 2 = 1 sec
-        return $this->speed = $speed * 10;
+    public function setSpeed($speed = 4){ // 4 = 1 sec
+        return $this->speed = $speed * 5;
     }
     
 }
