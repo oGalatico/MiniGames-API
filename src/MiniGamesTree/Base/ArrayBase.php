@@ -16,5 +16,7 @@ class ArrayBase{
         
         public $Time = 0;
         
+        public $score = array();
+        
         public $number = 0;
 }
