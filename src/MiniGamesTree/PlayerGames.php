@@ -7,9 +7,13 @@ class PlayerGames extends Base\ArrayBase{
         private $gscore;
     
         public function add($number,$player){
+            
         $this->number++;
+        
         $this->score[$player->getName()] = 0;
+        
         $this->num[$player->getName()] = $this->number;
+        
        return $this->pg
         {
         $number
@@ -18,9 +22,13 @@ class PlayerGames extends Base\ArrayBase{
     }
     
     public function remove($server,$number){
+        
         $this->number--;
+        
         unset($this->score[$this->getPlayerWithNumber($server,$number)->getName()]);
+        
         unset($this->num[$this->getPlayerWithNumber($server,$number)->getName()]);
+        
         unset($this->pg{
             $number       
                        });
