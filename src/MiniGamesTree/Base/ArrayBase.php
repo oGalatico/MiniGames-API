@@ -4,19 +4,19 @@ namespace MiniGamesTree\Base;
 
 class ArrayBase{
     
-        public $speed = 20;
+        protected $speed = 20;
         
-        public $move = "-";
+        protected $move = "-";
     
-        public $pg = array();
+        protected $pg = array();
         
-        public $num = array();
+        protected $num = array();
         
-        public $status = array();
+        protected $status = array();
         
-        public $Time = 0;
+        protected $Time = 0;
         
-        public $score = array();
+        protected $score = array();
         
-        public $number = 0;
+        protected $number = 0;
 }
