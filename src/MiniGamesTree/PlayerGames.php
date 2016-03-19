@@ -4,6 +4,7 @@ namespace MiniGamesTree;
 
 class PlayerGames extends Base\ArrayBase{
     
+        private $gscore;
     
         public function add($number,$player){
         $this->number++;
@@ -16,10 +17,10 @@ class PlayerGames extends Base\ArrayBase{
         $player->getName();
     }
     
-    public function remove($number){
+    public function remove($server,$number){
         $this->number--;
-        unset($this->score[$this->getPlayerWithNumber($number)->getName()]);
-        unset($this->num[$this->getPlayerWithNumber($number)->getName()]);
+        unset($this->score[$this->getPlayerWithNumber($server,$number)->getName()]);
+        unset($this->num[$this->getPlayerWithNumber($server,$number)->getName()]);
         unset($this->pg{
             $number       
                        });
@@ -34,8 +35,8 @@ class PlayerGames extends Base\ArrayBase{
     */
     }
     
-    public function getPlayerWithNumber($number){
-        return $this->server->getPlayer($this->pg{
+    public function getPlayerWithNumber($server,$number){
+        return $server->getPlayer($this->pg{
        $number - 
         (1)});
     }
@@ -66,22 +67,31 @@ class PlayerGames extends Base\ArrayBase{
    public function getLastPlayerNumber(){
    return $this->number;
    }
+   
     public function getNumber($player){
     return $this->num[$player->getName()];
     }
     
-    public function setScore($number,$score){
-    return $this->score[$this->getPlayerWithNumber($number)->getName()] = $score;  // $this->score[$this->getPlayerWithNumber($this->getNumber($player))->getName()] = $score;
+    public function getScore(){
+    $this->gscore = new Score();
+    return $this->gscore;
+    }
+ 
+}
+class Score extends Base\ArrayBase{
+    
+    public function setPlayerScore($player,$score){
+    return $this->score[$player->getName()] = $score;  // $this->setPlayerScore($this->getPlayerWithNumber($server,$number),$score);
     }
     
-    public function getScore($number){
-    return $this->score[$this->getPlayerWithNumber($number)->getName()];  // $this->score[$this->getPlayerWithNumber($this->getNumber($player))->getName()];
+    public function getPlayerScore($player){
+    return $this->score[$player->getName()];  // $this->getPlayerScore($player);
     }
     /*
     How Can Add Score !!
-    $this->setScore($number,$this->getScore($this->getNumber($player)) + $score) || $this->setScore($number,$this->getScore($this->getNumber($player)) - $score)
+    $this->setScore($player,$this->getScore($player) + $score) || $this->setScore($player,$this->getScore($player) - $score)
     
     */
- 
+    
 }
 ?>
