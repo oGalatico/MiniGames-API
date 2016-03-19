@@ -25,15 +25,21 @@ class Status extends Base\ArrayBase{
     } = self::Mode2;
     }
         public function isStart(){
+        if($this->isWiting() || $this->isStop()):
         return $this->status[0] == (self::Mode3);
+        endif;
     }
     
     public function isStop(){
-        return $this->status[0] == (self::Mode1);
+    if($this->isWiting() || $this->isStart()):
+    return $this->status[0] == (self::Mode1);
+    endif;
     }
     
     public function isWiting(){
+    if($this->isStop() || $this->isStart()):
     return $this->status[0] == (self::Mode2);
+    endif;
     }
     
 }
