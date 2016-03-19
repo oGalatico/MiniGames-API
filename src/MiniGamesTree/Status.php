@@ -1,5 +1,7 @@
 <?php
+
 namespace MiniGamesTree;
+
 class Status extends Base\ArrayBase{
     
     const Mode1 = "Stop";
