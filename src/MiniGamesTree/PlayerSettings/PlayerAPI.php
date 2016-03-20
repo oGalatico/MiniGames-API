@@ -15,17 +15,17 @@ class PlayerAPI{
     
     private $Time;
 
-    public function getPlayerAPI(){
+    public function getPlayerAPI() : PlayerGames{
     $this->g = new PlayerGames();
     return $this->g;
     }
     
-    public function getModeAPI(){
+    public function getModeAPI() : Status{
     $this->s = new Status();
     return $this->s;
     }
     
-    public function getTimeAPI(){
+    public function getTimeAPI() : Time{
     $this->Time = new Time();
     return $this->Time;
     }
